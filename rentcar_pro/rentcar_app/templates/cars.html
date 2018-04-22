@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lista Samochodów:</h1>
+    <ul>
+        {% for car in cars %}
+        <li>
+            <a href="detal_car/{{ car.id }}"> {{ car }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+        <br>
+
+        <a href="add_car">Dodaj Nowy</a>
+{% endblock %}

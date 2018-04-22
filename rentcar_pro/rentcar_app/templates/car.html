@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      {{ car }}
+    <ul>
+        <img src="{{ car.car_photo.url }}">
+        <li><strong>Marka: </strong> {{ car.mark }}</li>
+        <li><strong>Model: </strong> {{ car.model }}</li>
+        <li><strong>Rok Produkcji: </strong> {{ car.year }}</li>
+        <li><strong>Cena za dzień: </strong> {{ car.price_for_day }}</li>
+        <li><strong>Klasa: </strong> {{ car.car_class }}</li>
+        <li><strong>Wyporzyczony: </strong> {{ car.is_rent }}</li>
+    </ul>
+
+     <a href="/update_car/{{ car.id }}"> Edytuj </a>
+
+{% endblock %}
+

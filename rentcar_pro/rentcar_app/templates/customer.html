@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      {{ customer }}
+    <ul>
+        <li><strong>Imie: </strong> {{ customer.first_name }}</li>
+        <li><strong>Nazwisko: </strong> {{ customer.last_name }}</li>
+        <li><strong>Miasto: </strong> {{ customer.city }}</li>
+        <li><strong>Ulica: </strong> {{ customer.street }}</li>
+        <li><strong>Numer Budynku: </strong> {{ customer.house_nr }}</li>
+        <li><strong>Numer Mieszkania: </strong> {{ customer.flat_nr }}</li>
+    </ul>
+
+     <a href="/update_customer/{{ customer.id }}"> Edytuj </a>
+
+{% endblock %}
+

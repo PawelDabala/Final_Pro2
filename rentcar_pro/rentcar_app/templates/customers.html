@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Lista Klientów:</h1>
+    <ul>
+        {% for customer in customers %}
+        <li>
+            <a href="/detal_customer/{{ customer.id }}"> {{ customer }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+        <br>
+
+        <a href="add_customer">Dodaj Nowego Klienta</a>
+{% endblock %}
